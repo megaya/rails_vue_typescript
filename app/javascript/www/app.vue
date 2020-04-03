@@ -4,13 +4,12 @@
   </div>
 </template>
 
+
 <script lang="ts">
-export default {
-  data: function () {
-    return {
-      message: "Hello Www!"
-    }
-  }
+import { Component, Vue } from "vue-property-decorator";
+@Component
+export default class App extends Vue {
+  message = "Hello View"
 }
 </script>
 
