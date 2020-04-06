@@ -3,9 +3,11 @@ Rails.application.routes.draw do
     scope module: "www" do
       root 'home#index'
     end
-
     namespace 'api' do
-      mount_devise_token_auth_for 'User', at: 'auth'
+      namespace "www" do
+        mount_devise_token_auth_for 'User', at: 'auth'
+        resources :users, only: [:show]
+      end
     end
   end
 
