@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view />
+    <p>{{ message }}</p>
   </div>
 </template>
 
@@ -8,7 +8,8 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 @Component
-export default class App extends Vue {
+export default class SignInView extends Vue {
+  message = "Hello View"
 }
 </script>
 
