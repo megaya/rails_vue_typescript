@@ -23,7 +23,7 @@ export default class SignInView extends Vue {
 
   login() {
     Authorization.signIn({ email: this.email, password: this.password }).then((result) => {
-      console.log(result)
+      this.$router.push('user')
     }).catch((err) => {
       console.log(err)
     });
